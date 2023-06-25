@@ -1,0 +1,102 @@
+@use "../utils/variables"as *;
+@use "../components/main-page-button";
+
+
+.main-footer{
+    display: none;
+    background-color: getColor('background-dark');
+    color: getColor('white');
+    &__container{
+        display: flex;
+    }
+}
+
+
+.footer-contact{
+    padding: 60px 0px; 
+    font-style: normal;
+
+    &__logo{
+        font-family: 'Raleway', sans-serif;
+        font-size: 26px;
+        letter-spacing: 0.03em;
+        padding-bottom: 20px;
+        &--accent{
+            color: getColor('accent');
+        }
+    }
+    &__link{
+        font-size: 14px;
+        line-height: 1.7;
+        padding-bottom: 9px;
+        letter-spacing: 0.03em;
+        &--opacity{
+            opacity: 0.6;
+        }
+    }
+}
+
+.footer-socials{
+    margin-left:70px;
+    padding-top: 72px;
+    height: 100%;
+    &__text{
+        text-transform: uppercase;
+        line-height: 1.1428em;
+        font-size: 14px;
+    }
+    &__icons-block{
+        display:flex;
+        column-gap: 10px;
+        margin-top: 20px;
+    }
+    &__icon{
+        display:flex;
+        background-color: getColor('icon-footer');
+        border-radius: 50px;
+        fill: getColor('white');
+        padding: 12px;
+        &:hover,
+        &:focus{
+            background-color: getColor('accent');
+            fill: getColor('white');
+            cursor: pointer;
+            transition-property: background-color;
+            transition-duration: $default-duration;
+            transition-timing-function: $default-timing-function;  
+        }
+    }
+}
+
+.newsletter{
+    margin: 72px 0 0 78px;
+    &__label{
+        text-transform: uppercase;
+        line-height: 1.1428em;
+        font-size: 14px;
+    }
+    &__input{
+        width: 358px;
+        height: 50px;
+        background-color:inherit;
+        border: 1px solid getColor('newsletter-border');
+        border-radius: 4px;
+        padding-left: 16px;
+        &:focus{
+            outline: 1px solid getColor('accent');
+            transition-property: outline;
+            transition-duration: $default-duration;
+            transition-timing-function: $default-timing-function;
+        }
+    }
+    &__button-icon{
+        fill:getColor('white');
+        margin-left: 24px;
+    }
+    &__input-block{
+        margin-top: 20px;
+        display:flex;
+        gap:12px
+    }
+    
+}

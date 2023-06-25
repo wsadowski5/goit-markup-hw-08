@@ -1,0 +1,170 @@
+@use "../utils/variables"as *;
+@use "../components/main-page-button";
+
+
+%input{
+        width: 448px;
+        background-color:inherit;
+        border: 1px solid getColor('form-input-border');
+        border-radius: 4px;
+        display: block;
+}
+
+.is-hidden{
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    scale: 0;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:getShadow('third');
+    display: flex;    
+    transition-property: opacity, scale, visibility;
+    transition-duration: 1s;
+}
+
+
+
+.modal{
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: getColor('white');
+    box-shadow: 0px 1px 3px hetShadow('first'), 0px 1px 1px getShadow('second'), 0px 2px 1px getShadow('third');
+    border-radius: 4px;
+    &__close{
+        all:unset;
+        position: absolute;
+        margin:8px 0 0 490px;
+        &:hover{
+            background:none;
+            box-shadow: none;
+            cursor: pointer;
+        }
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    &__title{
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 0.03em;
+        line-height:23px;
+        margin-bottom: 2px;
+        font-style: 700;
+        font-weight: 700;
+    }
+    &__item{
+        position: relative;
+    }
+    &__label{
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: getColor('secondary');
+        margin: 10px 0 4px 0;
+        display: flex;
+    }
+    &__input{
+        @extend %input;
+        height:40px;
+        padding: 0 0 0 42px;
+    
+        &:focus{
+            outline: 1px solid getColor('accent');
+            transition-property: outline;
+            transition-duration: $default-duration;
+            transition-timing-function: $default-timing-function;
+        }
+
+
+        &:focus+svg{
+            fill: getColor('accent');    
+            transition-property: fill;
+            transition-duration: $default-duration;
+            transition-timing-function: $default-timing-function;
+        }
+    }
+
+    &__textarea{
+        @extend %input;
+        height: 120px;
+        padding: 12px 16px;
+        resize: none;
+        &:focus{
+            outline: 1px solid getColor('accent');
+            transition-property: outline;
+            transition-duration: $default-duration;
+            transition-timing-function: $default-timing-function;
+        }
+    }
+
+    &__icon{
+        position:absolute;
+        top: 32px;
+        left: 15px;
+        fill: getColor('icons-form');
+    }
+    
+}
+
+.checkbox{
+    margin: 20px 0 30px 15px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: getColor('secondary');
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__hidden-input{
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 15px;
+            z-index: 10;
+            &:checked ~ .checkbox__icon{
+                visibility: visible;
+                background-color: getColor('accent');
+                scale:1;
+            }
+            &.checkbox-hidden:checked ~ .checkbox-icon-unchecked{
+                scale: 0;
+            }
+    }
+    &__icon-unchecked{
+        position: absolute;
+        scale: 1;
+        transition:scale, 0.2s
+    }
+
+    &__icon{
+        position: absolute;
+    fill: getColor('white');
+    border-radius: 2px ;
+    visibility: hidden;
+    transition-property: background-color,visibility,scale;
+    transition-duration: $default-duration;
+    transition-timing-function: $default-timing-function;
+    scale:0;
+    }
+    &__text{
+        margin-left: 8px;
+    }
+    &__link{
+        text-decoration: underline;
+        color: getColor('accent');
+    }
+}

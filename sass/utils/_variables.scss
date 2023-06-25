@@ -1,0 +1,62 @@
+// colors
+
+$colors: (
+    'primary':#212121,
+    'secondary':#757575,
+    'accent':#2196F3,
+    'white':#fff,
+    'background-dark':#2F303A,
+    'background-light':#F5F4FA,
+    'header-border':#ECECEC,
+    'icon': #AFB1B8,
+    'icon-footer': #ffffff1a,
+    'newsletter-border': rgba(255, 255, 255, 0.3),
+    'icons-form': #212121,
+    'form-input-border': rgba(33, 33, 33, 0.2),
+    'grid-border': #eee,
+
+
+
+
+
+    //overlays
+    'first-section-overlay':#2F303A66,
+    'third-section-overlay': rgba(47, 48, 58, 0.8),
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+  }
+
+//shadows
+
+$shadows: (
+    'first': #0000001F,
+    'second': #00000024,
+    'third': #00000033,
+    'button-first':#0000001a, 
+    'button-second':#00000014,
+    'grid-first': #0000000f,
+    'grid-second': #00000029,
+);
+
+@function getShadow($key) {
+  @return map-get($shadows, $key);
+}
+
+
+//overlays
+
+$overlay:#2F303A66;
+
+
+//fonts
+
+$main-font:'Roboto', sans-serif; 
+$seconrady-font: 'Raleway', sans-serif;
+
+
+// transitions
+
+$default-duration: 250ms; 
+$default-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,0 +1,62 @@
+@use "../utils/variables"as *;
+@use "../utils/mixins"as *;
+
+//resets
+
+a{
+    text-decoration: inherit;
+    color:inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    list-style-type: none;
+}
+
+//styles
+
+body {
+    font-family: $main-font;
+    color: getColor('primary');
+    max-width: 1600px;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin:0 auto;
+    padding: 0 15px 0 15px;
+
+    @include tablet {
+        min-width: 768px;
+    }
+    @include desktop{
+        min-width: 1200px;
+    }   
+}
+
+
+a:hover, a:focus {
+    color: getColor('accent');
+    fill: getColor('accent');
+    transition-property: color, fill; 
+    transition-duration: $default-duration;
+    transition-timing-function: $default-timing-function;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+header{
+    border-bottom: 1px solid getColor('header-border');
+}

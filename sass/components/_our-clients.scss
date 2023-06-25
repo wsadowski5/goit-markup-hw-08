@@ -1,0 +1,25 @@
+@use "../utils/variables"as *;
+
+.our-clients{
+    display: none;
+    padding: 94px 0 94px 0;
+    &__icons-group{
+        display: flex;
+        justify-content: space-between ; 
+        fill: getColor('icon');
+    }
+    &__icon{
+        padding: 17.71px 32px 14.25px;
+        border: 1px solid getColor('icon');
+        border-radius: 4px;
+        &:hover,
+        &:focus{
+            border: 1px solid getColor('accent');
+            fill: getColor('accent');
+            cursor: pointer;
+            transition-property: fill, border;
+            transition-duration: $default-duration;
+            transition-timing-function: $default-timing-function;
+        }
+    }
+}

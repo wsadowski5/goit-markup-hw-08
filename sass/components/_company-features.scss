@@ -1,0 +1,30 @@
+@use "../utils/variables"as *;
+
+.company-features{
+    display: none;
+    padding: 94px 0;
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon{
+        background-color: getColor('background-light');
+        border-radius: 4px;
+        padding: 25px 100px;
+        margin-bottom: 30px
+    }
+    &__header{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__text{
+        line-height: 1.71 ;
+        padding-top: 10px;
+        font-size: 14px;
+        color: getColor('secondary');
+        width: 270px;
+        letter-spacing: 0.03em;
+    }
+
+}

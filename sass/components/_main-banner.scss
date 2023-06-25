@@ -1,0 +1,23 @@
+@use "../utils/variables"as *;
+@use "../components/main-page-button";
+
+.main-banner{
+    display: none;
+    background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),url('../images/background-main.jpg');
+    width: 100%;
+    height: 600px;
+    &__item{
+        font-size: 44px;
+        font-weight: 900;
+        color:getColor("white");
+        padding: 200px 237px 0 237px;
+        text-align: center;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+}
+
+
+

@@ -1,0 +1,15 @@
+@use "./utils/_variables.scss";
+@use "./utils/_mixins.scss";
+@use "./utils/_globals.scss";
+
+
+@use "./components/_main-navigation.scss";
+@use "./components/_main-banner.scss";
+@use "./components/_company-features.scss";
+@use "./components/_what-we-do.scss";
+@use "./components/_our-team.scss";
+@use "./components/_our-clients.scss";
+@use "./components/_main-footer.scss";
+@use "./components/_modal-window.scss";
+@use "./components/_product-grid.scss";
+@use "./components/_mobile-menu.scss";
