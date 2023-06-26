@@ -1,30 +1,55 @@
 @use "../utils/variables"as *;
+@use "../utils/mixins"as *;
 
 .company-features{
-    display: none;
-    padding: 94px 0;
+    padding: 60px 0 30px;
 
+    @include tablet{
+        padding: 60px 0 15px;
+    }
+    @include desktop{
+    padding: 94px 0 64px;
+    }
     &__list{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+    }
+    &__box{
+        max-width:450px;
+        @include tablet{
+            max-width:354px;
+        }
+        @include desktop {
+            max-width:270px;
+        }
+        
     }
     &__icon{
         background-color: getColor('background-light');
+        
+        height: 120px;
+        display: flex;
+        margin-bottom: 30px;
         border-radius: 4px;
-        padding: 25px 100px;
-        margin-bottom: 30px
+        justify-content: center;
+        align-items: center;
+      
     }
     &__header{
         font-size: 14px;
         font-weight: 700;
+        text-align: center;
+        @include tablet {
+            text-align: start;
+        }
     }
     &__text{
         line-height: 1.71 ;
-        padding-top: 10px;
+        margin: 10px 0 30px;
         font-size: 14px;
         color: getColor('secondary');
-        width: 270px;
+        max-width: 450px;
         letter-spacing: 0.03em;
     }
-
 }

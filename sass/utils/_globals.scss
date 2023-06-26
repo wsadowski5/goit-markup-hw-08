@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 480px;
     width: 100%;
     margin:0 auto;
     padding: 0 15px 0 15px;
@@ -60,3 +60,9 @@ h2{
 header{
     border-bottom: 1px solid getColor('header-border');
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }

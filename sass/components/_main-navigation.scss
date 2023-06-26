@@ -1,9 +1,6 @@
 @use "../utils/variables"as *;
 @use "../utils/mixins"as *;
 
-
-
-
 .main-navigation {
     font-weight: 500;
     font-size: 14px;
@@ -20,13 +17,25 @@
         
         &--contact {
             display: none;
-            justify-content: flex-end;
-            font-weight: 500;
-            font-size: 14px;
-            color: getColor('secondary');
-            fill: getColor('secondary');
-            gap: 50px;
+            
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 14px;
+                color: getColor('secondary');
+                fill: getColor('secondary');
+                align-items: start;
             }
+            @include desktop{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
     
         &--icon {
                 display: flex;
@@ -39,6 +48,9 @@
     &__link {
         
         display: none;
+        @include tablet{
+            display: flex;
+        }
 
         &--logo{
             font-family: $seconrady-font;
@@ -52,7 +64,13 @@
         }
 
         &--home{
-            margin-left: 47px;
+
+            @include tablet{
+                margin-left: 37px;
+            }
+            @include desktop{
+                margin-left: 47px;
+                }
         }
     }
 
@@ -89,4 +107,3 @@
         
     }
 }
-
