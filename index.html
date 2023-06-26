@@ -116,7 +116,32 @@ aria-controls="mobile-menu">
     <h2>Nasz zespół</h2>
     <ul class="our-team__list">
       <li class="our-team__item">
-        <img src="images/product_designer.jpg" alt="smiling man with dark hair and beard wearing glasses, in a black shirt" width="270" height="260">
+
+        <picture>
+          <source srcset="
+          images/our-team/product-designer-mobile@1x.jpg 1x, 
+          images/our-team/product-designer-mobile@2x.jpg 2x" 
+          media="(max-width: 768px)"
+          >
+
+          <source srcset="
+          images/our-team/product-designer-tablet@1x.jpg 1x, 
+          images/our-team/product-designer-tablet@2x.jpg 2x" 
+          media="(min-width: 768px) and (max-width: 1200px)"
+          >
+
+          <source srcset="
+          images/our-team/product-designer-desktop@1x.jpg 1x, 
+          images/our-team/product-designer-desktop@2x.jpg 2x" 
+          media="(min-width: 1200px)"
+          >
+
+        <img alt="smiling man with dark hair and beard wearing glasses, in a black shirt" 
+        src="images/our-team/product-designer-mobile@1x.jpg"
+        srcset="images/our-team/product-designer-mobile@2x.jpg" 2x >
+
+        </picture>
+
         <h4 class="our-team__header">John Doe</h4>
         <p>Product Designer</p>
         <div class="our-team__icon">
@@ -129,7 +154,7 @@ aria-controls="mobile-menu">
             <svg width="20px" height="20px">
               <use href="./images/icons.svg#icon-twitter"></use>
             </svg> 
-          </div>    
+          </div>     
           <div class="our-team__icon--background">
             <svg width="20px" height="20px">
               <use href="./images/icons.svg#icon-facebook"></use>
@@ -142,7 +167,7 @@ aria-controls="mobile-menu">
           </div>  
         </div>  
       <li class="our-team__item">
-        <img src="images/frontend_developer.jpg" alt="smiling woman with blonde hair wearing glasses" width="270"  height="260">
+        <img src="images/frontend_developer.jpg" alt="smiling woman with blonde hair wearing glasses">
         <h4 class="our-team__header">John Doe</h4>
         <p>Frontend Developer</p>
         <div class="our-team__icon">

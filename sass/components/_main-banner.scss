@@ -11,24 +11,24 @@
     background-size: 480px 400px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),
+    background-image:linear-gradient(getColor('banner-overlay'),getColor('banner-overlay')),
     url('../images/responsive-background/background-mobile-1x.jpg');
 
     @include doubledppx {
         
-        background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),
+        background-image:linear-gradient(getColor('banner-overlay'),getColor('banner-overlay')),
         url('../images/responsive-background/background-mobile-2x.jpg');
     }
 
     @include tablet {
-        background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),
+        background-image:linear-gradient(getColor('banner-overlay'),getColor('banner-overlay')),
         url('../images/responsive-background/background-tablet-1x.jpg');
     
         background-size: 768px 400px;
     
         @include doubledppx {
             
-            background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),
+            background-image:linear-gradient(getColor('banner-overlay'),getColor('banner-overlay')),
             url('../images/responsive-background/background-tablet-2x.jpg');
         }
     }
@@ -36,14 +36,14 @@
     @include desktop{
         padding-top: 200px;
         height: 600px;
-        background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),
+        background-image:linear-gradient(getColor('banner-overlay'),getColor('banner-overlay')),
         url('../images/responsive-background/background-desktop-1x.jpg');
         background-size: 1600px 600px;
 
     
         @include doubledppx {
             
-            background-image:linear-gradient(getColor('first-section-overlay'),getColor('first-section-overlay')),
+            background-image:linear-gradient(getColor('banner-overlay'),getColor('banner-overlay')),
             url('../images/responsive-background/background-desktop-2x.jpg');
         }
     }
