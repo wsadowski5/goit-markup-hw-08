@@ -1,17 +1,31 @@
 @use "../utils/variables"as *;
+@use "../utils/mixins"as *;
 
 .our-clients{
-    display: none;
-    padding: 94px 0 94px 0;
+    padding: 60px 0;
+    @include desktop{
+    padding: 94px 0;
+}
     &__icons-group{
-        display: flex;
-        justify-content: space-between ; 
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
         fill: getColor('icon');
     }
     &__icon{
-        padding: 17.71px 32px 14.25px;
+        padding: 17.71px 0 14.25px ;
         border: 1px solid getColor('icon');
         border-radius: 4px;
+        max-width: 210px;
+        height: 92px;
+
+        @include tablet{
+            max-width: 226px
+        }
+        @include desktop{
+            max-width: 170px;
+        }
         &:hover,
         &:focus{
             border: 1px solid getColor('accent');

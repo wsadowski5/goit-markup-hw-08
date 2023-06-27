@@ -1,20 +1,39 @@
 @use "../utils/variables"as *;
 @use "../components/main-page-button";
+@use "../utils/mixins"as *;
 
 
 .main-footer{
-    display: none;
     background-color: getColor('background-dark');
     color: getColor('white');
     &__container{
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding: 60px 0;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 144px
+        }
+        @include desktop{
+            flex-direction: row;
+            align-items: unset;
+        }
     }
 }
 
 
 .footer-contact{
-    padding: 60px 0px; 
+
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop{
+        align-items: flex-start;
+    }
 
     &__logo{
         font-family: 'Raleway', sans-serif;
@@ -37,9 +56,13 @@
 }
 
 .footer-socials{
-    margin-left:70px;
-    padding-top: 72px;
-    height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+    @include desktop{
+        margin: 72px 0 0 70px;
+        align-items: flex-start;
+    }
     &__text{
         text-transform: uppercase;
         line-height: 1.1428em;
@@ -69,15 +92,21 @@
 }
 
 .newsletter{
-    margin: 72px 0 0 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
     &__label{
+        
         text-transform: uppercase;
         line-height: 1.1428em;
         font-size: 14px;
     }
     &__input{
-        width: 358px;
         height: 50px;
+
+        max-width: 450px;
         background-color:inherit;
         border: 1px solid getColor('newsletter-border');
         border-radius: 4px;
@@ -92,11 +121,6 @@
     &__button-icon{
         fill:getColor('white');
         margin-left: 24px;
-    }
-    &__input-block{
-        margin-top: 20px;
-        display:flex;
-        gap:12px
     }
     
 }
