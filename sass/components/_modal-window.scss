@@ -1,9 +1,10 @@
 @use "../utils/variables"as *;
 @use "../components/main-page-button";
+@use "../utils/mixins"as *;
 
 
 %input{
-        width: 448px;
+        
         background-color:inherit;
         border: 1px solid getColor('form-input-border');
         border-radius: 4px;
@@ -33,25 +34,34 @@
 
 .modal{
     position: absolute;
-    width: 528px;
+    width: min(90%, 450px);
     min-height: 581px;
+    
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: getColor('white');
     box-shadow: 0px 1px 3px hetShadow('first'), 0px 1px 1px getShadow('second'), 0px 2px 1px getShadow('third');
     border-radius: 4px;
+
+    @include desktop{
+        width: 528px;
+        min-height: 581px;
+    }
     &__close{
         all:unset;
         position: absolute;
-        margin:8px 0 0 490px;
+        top: 8px;
+        right: 8px;
+        
+        }
         &:hover{
             background:none;
             box-shadow: none;
             cursor: pointer;
         }
     }
-}
+
 .form{
     display: flex;
     flex-direction: column;

@@ -15,11 +15,15 @@
         @include tablet{
             flex-direction: row;
             flex-wrap: wrap;
-            column-gap: 144px
+            column-gap: 144px;
+            justify-content:center;
+            align-items: baseline;
         }
         @include desktop{
             flex-direction: row;
             align-items: unset;
+            gap: 0;
+            flex-wrap: nowrap;
         }
     }
 }
@@ -33,6 +37,7 @@
     align-items: center;
     @include desktop{
         align-items: flex-start;
+        width: 246px;
     }
 
     &__logo{
@@ -59,8 +64,9 @@
 display: flex;
 flex-direction: column;
 align-items: center;
+@include tablet {}
     @include desktop{
-        margin: 72px 0 0 70px;
+        margin: 12px 0 0 70px;
         align-items: flex-start;
     }
     &__text{
@@ -96,21 +102,36 @@ align-items: center;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
+    @include desktop{
+        flex-direction: row;
+        gap:0px;
+        align-items: flex-start;
+        margin: 12px 0 0 78px;
+    }
     
     &__label{
-        
+        text-align: center;
+        width: 100%;
+        max-width: min(90%,450px);
         text-transform: uppercase;
         line-height: 1.1428em;
         font-size: 14px;
+        @include desktop{
+            max-width: 358px;
+            text-align: start;
+        }
     }
     &__input{
         height: 50px;
-
-        max-width: 450px;
         background-color:inherit;
         border: 1px solid getColor('newsletter-border');
         border-radius: 4px;
         padding-left: 16px;
+        margin-top: 20px;
+        @include desktop{
+            width: 358px;
+        }
         &:focus{
             outline: 1px solid getColor('accent');
             transition-property: outline;
@@ -122,5 +143,12 @@ align-items: center;
         fill:getColor('white');
         margin-left: 24px;
     }
+    &--btn-position{
+        @include desktop{
+        margin-left: 12px;
+        margin-top: 36px;
+    }
+    }
     
 }
+
