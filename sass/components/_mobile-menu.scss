@@ -35,7 +35,7 @@
 
 .mobile-menu{
     font-size: 40px;
-    line-height: 46.88px;
+    line-height: 1.17;
     display: flex;
     flex-direction: column;
     gap:32px;
@@ -48,12 +48,12 @@
     margin-bottom: 64px;
     &__phone{
         font-size: 34px;
-        line-height: 39.84px;
+        line-height: 1,17;
         color:getColor('accent');
     }
     &__email{
         font-size: 24px;
-        line-height: 28.13px;
+        line-height: 1.17;
         color: getColor('secondary');
     }
 }
@@ -61,7 +61,7 @@
 
 .mobile-socials{
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.22;
     color: getColor('accent');
     display: flex;
     flex-wrap:wrap ;

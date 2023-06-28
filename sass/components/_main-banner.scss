@@ -55,14 +55,14 @@
         text-transform: uppercase;
         letter-spacing: 0.06em;
         font-size: 26px;
-        line-height: 42px;
+        line-height: 1.615;
         max-width: 365px;
         text-align: center;
         margin: 0 auto 30px;
 
         @include desktop{
         font-size: 44px;
-        line-height: 60px;
+        line-height: 1.36;
         max-width: 696px;
         }
     }
